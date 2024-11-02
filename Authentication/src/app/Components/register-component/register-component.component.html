@@ -1,1 +1,67 @@
-<p>register-component works!</p>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-sm p-4" style="border-radius: 12px;">
+        <div class="d-flex gap-3">
+            <div>
+                <h4 class="mb-3">Sign up</h4>
+            
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <div class="input-group-text" id="btnGroupAddon"><i class="bi bi-person"></i></div>
+                            <input type="text" class="form-control" placeholder="John Doe" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <div class="input-group-text" id="btnGroupAddon"><i class="bi bi-envelope"></i></div>
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <div class="input-group-text" id="btnGroupAddon"><i class="bi bi-lock"></i></div>
+                            <input type="password" class="form-control" placeholder="Password" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <div class="input-group-text" id="btnGroupAddon"><i class="bi bi-lock-fill"></i></div>
+                            <input type="password" class="form-control" placeholder="Confirm password" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <div class="input-group-text" id="btnGroupAddon"><i class="bi bi-person-badge"></i></div>
+                            <select id="role" formControlName="role" class="form-select" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                                <option value="">Select Role</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Editor">Editor</option>
+                                <option value="Viewer">Viewer</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="form-check mb-3">
+                        <input type="checkbox" id="terms" formControlName="terms" class="form-check-input">
+                        <label for="terms" class="form-check-label">
+                            I agree to all statements in <a href="#">Terms of service</a>
+                        </label>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary w-100">Register</button>
+    
+                    <p class="text-center mt-3">
+                        <a href="#"  class="text-dark">I am already a member</a>
+                    </p>
+                </form>
+            </div>
+            <div>
+                <img src="signup.jpg" alt="Signup Image">
+            </div>
+        </div>
+    </div>
+</div>
